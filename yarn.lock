@@ -3693,7 +3693,7 @@ eslint-import-resolver-node@^0.3.2:
     debug "^2.6.9"
     resolve "^1.5.0"
 
-eslint-loader@^2.1.0:
+eslint-loader@^2.1.0, eslint-loader@^2.1.2:
   version "2.1.2"
   resolved "https://registry.yarnpkg.com/eslint-loader/-/eslint-loader-2.1.2.tgz#453542a1230d6ffac90e4e7cb9cadba9d851be68"
   integrity sha512-rA9XiXEOilLYPOIInvVH5S/hYfyTPyxag6DZhoQOduM+3TkghAEQ3VcFO8VnX4J4qg/UIBzp72aOf/xvYmpmsg==
@@ -4732,6 +4732,11 @@ gatsby-link@^2.0.16:
     "@babel/runtime" "^7.0.0"
     "@types/reach__router" "^1.0.0"
     prop-types "^15.6.1"
+
+gatsby-plugin-eslint@^2.0.4:
+  version "2.0.4"
+  resolved "https://artifactory-eng.cargurus.com/artifactory/api/npm/npm-registry/gatsby-plugin-eslint/-/gatsby-plugin-eslint-2.0.4.tgz#24bed84e9059310332a6fbfd3a41406d46755a29"
+  integrity sha1-JL7YTpBZMQMypvv9OkFAbUZ1Wik=
 
 gatsby-plugin-less@^2.0.12:
   version "2.0.12"

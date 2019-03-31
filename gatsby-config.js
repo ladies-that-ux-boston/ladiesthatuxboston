@@ -1,7 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: 'Ladies that UX Boston',
-    description: 'Meetup group for people interested in user experience and other design topics in the Boston area',
+    description:
+      'Meetup group for people interested in user experience and other design topics in the Boston area',
     author: '@katielangerman',
   },
   plugins: [

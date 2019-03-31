@@ -1,8 +1,7 @@
+/* eslint-disable max-len */
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
-import { Link } from 'gatsby';
-
 import Layout from '../components/layout';
-import Image from '../components/image';
 import SEO from '../components/seo';
 import Contact from '../components/contact';
 import Social from '../components/social';

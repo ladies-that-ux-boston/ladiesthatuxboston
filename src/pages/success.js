@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import Layout from '../components/layout';
 import styles from '../styles/base.module.less';
 
-const Success = props => (
+const Success = () => (
   <Layout>
     <Helmet>
       <title>Success Page</title>
