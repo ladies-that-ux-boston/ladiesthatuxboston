@@ -1,26 +1,20 @@
-import React from 'react'
-import Helmet from 'react-helmet'
-import Layout from '../components/layout'
+import React from 'react';
+import Helmet from 'react-helmet';
+import { Link } from 'gatsby';
+import Layout from '../components/layout';
+import styles from '../styles/base.module.less';
 
+const Success = props => (
+  <Layout>
+    <Helmet>
+      <title>Success Page</title>
+      <meta name="description" content="Success Page" />
+    </Helmet>
+    <span className={styles.textCenter}>
+      <p>Thank you for contacting us!</p>
+      <p><Link to="/">Go back</Link></p>
+    </span>
+  </Layout>
+);
 
-const Success = (props) => (
-    <Layout>
-        <Helmet>
-            <title>Success Page</title>
-            <meta name="description" content="Success Page" />
-        </Helmet>
-
-        <div id="main" className="alt">
-            <section id="one">
-                <div className="inner">
-                    <header className="major">
-                        <h1>Success/Thank You Page</h1>
-                    </header>
-                    <p>Thank you for contacting us!</p>
-                </div>
-            </section>
-        </div>
-    </Layout>
-)
-
-export default Success
+export default Success;

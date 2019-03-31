@@ -9,11 +9,32 @@ body {
 	left: 0;
 	top: 0;
 	font-size: 100%;
+	color: #231f20;
+}
+
+a {
+	color: #1a6a6a;
+
+	&:hover, &:active {
+		color: darken(#1a6a6a, 10%);
+		transition: ease-in-out .3s;
+	}
 }
 
 ul {
 	list-style: none;
 	margin-bottom: 0;
+	margin-left: 0;
+}
+
+.logo {
+	text-align: center;
+	margin-bottom: 2rem;
+
+	svg {
+		//height: 30%;
+		width: 20%;
+	}
 }
 
 .container {
@@ -42,6 +63,7 @@ ul {
 }
 
 header {
+	margin-top: 2rem;
 	grid-area: header;
 	text-align: center;
 }
@@ -53,16 +75,37 @@ main {
 footer {
 	grid-area: footer;
 	text-align: center;
+	margin: 3rem 0 1rem 0;
+}
+
+.textCenter {
+	text-align: center;
 }
 
 // social
+
+.social {
+	margin: 4rem 0;
+}
+
 .iconWrap {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
+	margin-top: 2rem;
+
+	li {
+		margin: 0 1.5rem;
+	}
 
 	a {
 		display: flex;
     	flex-direction: column;
-    	align-items: center;
+		align-items: center;
+		color: #ff5d40;
+		transition: ease-in-out .3s;
+
+		&:hover, &:active {
+			color: darken(#ff5d40, 20%);
+		}
 	}
 }

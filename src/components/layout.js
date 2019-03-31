@@ -5,17 +5,17 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from "react"
-import PropTypes from "prop-types"
-import { StaticQuery, graphql } from "gatsby"
-import typography from "../utils/typography.js"
+import React from 'react';
+import PropTypes from 'prop-types';
+import { StaticQuery, graphql } from 'gatsby';
+import typography from '../utils/typography.js';
 
-import Header from "./header"
-import styles from "../styles/base.module.less"
+import Header from './header';
+import styles from '../styles/base.module.less';
 
 const Layout = ({ children }) => (
-	<StaticQuery
-		query={graphql`
+  <StaticQuery
+    query={graphql`
 			query SiteTitleQuery {
 				site {
 					siteMetadata {
@@ -24,23 +24,27 @@ const Layout = ({ children }) => (
 				}
 			}
 		`}
-		render={data => (
-			<>
-				<div className={styles.container}>
-					<Header siteTitle={data.site.siteMetadata.title} />
-					<main>{children}</main>
-					<footer>
-						© {new Date().getFullYear()}, Ladies that UX Boston
-					</footer>
-				</div>
-			</>
-		)}
-	/>
-)
+    render={data => (
+      <>
+        <div className={styles.container}>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <main>{children}</main>
+          <footer>
+						©
+            {' '}
+            {new Date().getFullYear()}
+            {' '}
+Ladies that UX Boston
+
+          </footer>
+        </div>
+      </>
+    )}
+  />
+);
 
 Layout.propTypes = {
-	children: PropTypes.node.isRequired,
-}
+  children: PropTypes.node.isRequired,
+};
 
-export default Layout
-
+export default Layout;
