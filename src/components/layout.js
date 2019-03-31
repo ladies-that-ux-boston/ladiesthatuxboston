@@ -8,6 +8,7 @@
 import React from "react"
 import PropTypes from "prop-types"
 import { StaticQuery, graphql } from "gatsby"
+import typography from "../utils/typography.js"
 
 import Header from "./header"
 import "./layout.css"
@@ -51,3 +52,4 @@ Layout.propTypes = {
 }
 
 export default Layout
+
