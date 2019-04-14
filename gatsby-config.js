@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Ladies that UX Boston',
     description:
-      'Meetup group for people interested in user experience and other design topics in the Boston area',
+      'Ladies that UX Boston (LTUX Boston) is a meetup group for people interested in user experience and other design topics in the Boston area',
     author: '@katielangerman',
   },
   plugins: [
@@ -40,7 +40,7 @@ module.exports = {
       options: {
         trackingId: 'UA-137392271-1',
         // Puts tracking script in the head instead of the body
-        head: false,
+        head: true,
         // Setting this parameter is optional
         anonymize: true,
         // Setting this parameter is also optional
