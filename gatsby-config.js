@@ -4,18 +4,17 @@ module.exports = {
     description:
       'Ladies that UX Boston (LTUX Boston) is a meetup group for people interested in user experience and other design topics in the Boston area',
     author: '@katielangerman',
+    siteUrl: 'https://www.ladiesthatuxboston.com',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-less',
+    'gatsby-plugin-sitemap',
     {
       resolve: 'gatsby-plugin-typography',
       options: {
         pathToConfigModule: 'src/utils/typography',
       },
-    },
-    {
-      resolve: 'gatsby-plugin-sitemap',
     },
     {
       resolve: 'gatsby-source-filesystem',
