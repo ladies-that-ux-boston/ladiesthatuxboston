@@ -11,37 +11,45 @@ const plugins = [MorphSVGPlugin];
 const speed = 7;
 const basewater = 9;
 
-TweenMax.to('#watermid', speed, {
-  morphSVG: '#watertop',
-  opacity: 0.25,
-  ease: Sine.easeInOut,
-  yoyo: true,
-  repeat: -1,
-});
+const waterBase = ['#waterbase'];
+const waterMid = ['#watermid'];
+const waterTop = ['#watertop'];
 
-TweenMax.to('#waterbase', basewater, {
-  morphSVG: '#watermid',
+const boat1 = ['#boat1'];
+const boat2 = ['#boat2'];
+const boat3 = ['#boat3'];
+
+TweenMax.to(waterBase, basewater, {
+  morphSVG: waterMid,
   opacity: 0.8,
   ease: Sine.easeInOut,
   yoyo: true,
   repeat: -1,
 });
 
+TweenMax.to(waterMid, speed, {
+  morphSVG: waterTop,
+  opacity: 0.25,
+  ease: Sine.easeInOut,
+  yoyo: true,
+  repeat: -1,
+});
+
 TweenMax.fromTo(
-  '#boat1',
+  boat1,
   speed,
   { rotation: -10 },
   { rotation: 10, yoyo: true, ease: Sine.easeInOut, repeat: -1 },
 );
 
 TweenMax.fromTo(
-  '#boat2',
+  boat2,
   basewater,
   { rotation: -5 },
   { y: -20, rotation: 10, yoyo: true, ease: Sine.easeInOut, repeat: -1 },
 );
 
-TweenMax.from('#boat3', 6, {
+TweenMax.from(boat3, 6, {
   x: -15,
   rotation: 5,
   yoyo: true,
@@ -53,7 +61,7 @@ export default function CityImage() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 998.579 556.321"
+      viewbox="0 0 998.579 556.321"
     >
       <path
         id="citgofill"
