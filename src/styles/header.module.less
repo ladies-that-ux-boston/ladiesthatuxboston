@@ -1,0 +1,48 @@
+@import "_variables.less";
+@import "_mixins.less";
+
+header {
+	display: flex;
+	flex-wrap: wrap;
+	grid-area: header;
+	align-items: center;
+	justify-content: center;
+	margin-top: 1rem;
+
+	svg {
+		width: 100px;
+	}
+
+	.navLinks {
+		display: flex;
+		flex-direction: column;
+
+		ul {
+			display: flex;
+			flex-direction: row;
+
+			li {
+				margin: .5rem .75rem;
+
+				&:first-of-type {
+					margin-left: 0;
+				}
+
+				&:last-of-type {
+					margin-right: 0;
+				}
+			}
+		}
+	}
+
+	.socialLinks {
+		display: flex;
+		flex-direction: row;
+	}
+}
+
+@media only screen and (min-width: @tablet) {
+	header {
+		// justify-content: flex-end;
+	}
+}

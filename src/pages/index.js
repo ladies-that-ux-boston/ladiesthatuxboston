@@ -12,7 +12,6 @@ const IndexPage = () => (
     <SEO title="Home" keywords={['gatsby', 'application', 'react']} />
     <Description />
     <Social />
-    <Contact />
   </Layout>
 );
 

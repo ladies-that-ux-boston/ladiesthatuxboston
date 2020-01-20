@@ -2,7 +2,7 @@
 /* eslint-disable jsx-a11y/label-has-for */
 import React from 'react';
 import styles from '../styles/contact.module.less';
-import base from '../styles/base.module.less';
+import base from '../styles/base.less';
 
 const Contact = () => (
   <section id="contact">

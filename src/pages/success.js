@@ -2,7 +2,7 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Link } from 'gatsby';
 import Layout from '../components/layout';
-import styles from '../styles/base.module.less';
+import styles from '../styles/base.less';
 
 const Success = () => (
   <Layout>

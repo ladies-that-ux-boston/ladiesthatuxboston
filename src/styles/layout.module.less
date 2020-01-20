@@ -1,0 +1,41 @@
+@import "_variables";
+@import "_mixins";
+
+.pageWrap {
+    margin: 0;
+    display: grid;
+    grid-gap: 2rem 0;
+    grid-template:
+        "header" auto
+        "main" auto
+        "footer" auto
+        / 1fr;
+}
+
+@media only screen and (min-width: @desktop) {
+	.pageWrap {
+		grid-template:
+			". header ." auto
+		    ". main ." auto
+		    "footer footer footer" auto
+		    / .25fr 3fr .25fr;
+	}
+}
+
+@media only screen and (min-width: @lg-desktop) {
+	.pageWrap {
+		grid-template:
+			". header ." auto
+		    ". main ." auto
+		    "footer footer footer" auto
+		    / .5fr 3fr .5fr;
+	}
+}
+
+main {
+	grid-area: main;
+	display: grid;
+	grid-gap: 4rem 2rem;
+	grid-template-columns: repeat(12, 1fr);
+	grid-template-rows: auto;
+}

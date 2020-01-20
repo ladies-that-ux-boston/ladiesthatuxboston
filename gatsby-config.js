@@ -11,10 +11,12 @@ module.exports = {
     'gatsby-plugin-less',
     'gatsby-plugin-sitemap',
     {
-      resolve: 'gatsby-plugin-typography',
+      resolve: 'gatsby-plugin-web-font-loader',
       options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
+        google: {
+          families: ['Muli'],
+        }
+      }
     },
     {
       resolve: 'gatsby-source-filesystem',

@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from '../styles/base.module.less';
+import styles from '../styles/base.less';
 
 const Logo = () => (
   <section className={styles.logo}>

@@ -1,0 +1,116 @@
+@import '_variables';
+@import '_mixins';
+@import 'reset.css';
+
+// base font styles
+
+body {
+    font-family: @base-font;
+    font-size: 100%;
+    background-color: @white;
+    color: @body;
+}
+
+h1,
+.header1 {
+    font-family: @heading-font;
+    font-variation-settings: @heading-font-weight-bold;
+    color: @black;
+    line-height: @smallerLineHeight;
+    margin-top: 0;
+    margin-bottom: 0;
+    .fontSize(46px);
+}
+
+@media only screen and (min-width: @tablet) {
+    h1,
+    .header1 {
+        letter-spacing: .04em;
+        .fontSize(48px);
+    }
+}
+
+h2,
+.header2 {
+    font-family: @heading-font;
+    color: @black;
+    line-height: @baseLineHeight;
+    margin-top: 0;
+    margin-bottom: 0;
+    letter-spacing: .04em;
+    .fontSize(36px);
+}
+
+h3,
+.header3 {
+    font-family: @cabin-italic;
+    font-variation-settings: @cabin-regular-italic;
+    font-style: italic;
+    color: @black;
+    line-height: @baseLineHeight;
+    margin-top: 0;
+    margin-bottom: 0;
+    .fontSize(30px);
+}
+
+h4,
+.header4 {
+    font-family: @base-font;
+    color: @black;
+    line-height: @baseLineHeight;
+    margin-top: 0;
+    margin-bottom: 0;
+    .fontSize(24px);
+}
+
+h5,
+.header5 {
+    font-family: @base-font;
+    color: @black;
+    line-height: @baseLineHeight;
+    margin-top: 0;
+    margin-bottom: 0;
+    .fontSize(18px);
+}
+
+p {
+    color: @body;
+    line-height: @baseLineHeight;
+    margin-bottom: 0;
+    margin-top: 0;
+    .fontSize(18px);
+
+    &.bodySM {
+        .fontSize(14px);
+    }
+
+    &.bodyLight {
+        color: @bodylight;
+    }
+}
+
+a {
+    color: @link;
+    text-decoration: none;
+
+    &:hover,
+    &:focus,
+    &:active {
+        color: @link-hover;
+    }
+}
+
+
+// sets ideal reading line length
+.bodyOfText {
+    .px-em(width, 640);
+    margin: 0 auto;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+strong {
+    font-variation-settings: @source-sans-bold;
+}

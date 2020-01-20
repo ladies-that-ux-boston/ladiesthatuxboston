@@ -1,0 +1,19 @@
+@import "_variables";
+@import "_mixins";
+
+footer {
+    background-color: @background;
+    grid-area: footer;
+    padding-top: 3rem;
+    .fontSize(16px);
+
+    .navLinksWrap {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        li:not(:first-of-type) {
+            padding: 0 1rem;
+        }
+    }
+}
