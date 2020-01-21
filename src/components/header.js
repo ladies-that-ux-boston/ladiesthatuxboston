@@ -20,32 +20,32 @@ const Header = () => (
       <ul>
         <li>
           <a
-            href="https://www.linkedin.com/in/langermank/"
-            alt="linkedin"
+            href="https://www.meetup.com/Ladies-That-UX-Boston/"
+            alt="meetup"
             target="_blank"
             rel="noopener noreferrer"
           >
-            linkedin
+            meetup
           </a>
         </li>
         <li>
           <a
             href="https://twitter.com/KatieLangerman"
-            alt="twitter"
+            alt="contact"
             target="_blank"
             rel="noopener noreferrer"
           >
-            twitter
+            contact
           </a>
         </li>
         <li>
           <a
             href="https://github.com/langermank"
-            alt="github"
+            alt="about"
             target="_blank"
             rel="noopener noreferrer"
           >
-            github
+            about
           </a>
         </li>
         <li>
@@ -53,9 +53,9 @@ const Header = () => (
             href="https://dribbble.com/katielangerman"
             target="_blank"
             rel="noopener noreferrer"
-            alt="dribbble"
+            alt="code of conduct"
           >
-            dribbble
+            code of conduct
           </a>
         </li>
       </ul>
@@ -67,7 +67,7 @@ const Header = () => (
           rel="noopener norefferer"
           target="_blank"
         >
-          <FontAwesomeIcon icon={faMeetup} size="3x" />
+          <FontAwesomeIcon icon={faMeetup} size="2x" />
         </a>
       </li>
       <li>
@@ -76,16 +76,7 @@ const Header = () => (
           target="_blank"
           rel="noopener norefferer"
         >
-          <FontAwesomeIcon icon={faTwitter} size="3x" />
-        </a>
-      </li>
-      <li>
-        <a
-          href="https://www.facebook.com/LTUXBOS/"
-          target="_blank"
-          rel="noopener norefferer"
-        >
-          <FontAwesomeIcon icon={faFacebook} size="3x" />
+          <FontAwesomeIcon icon={faTwitter} size="2x" />
         </a>
       </li>
       <li>
@@ -94,7 +85,7 @@ const Header = () => (
           target="_blank"
           rel="noopener norefferer"
         >
-          <FontAwesomeIcon icon={faInstagram} size="3x" />
+          <FontAwesomeIcon icon={faInstagram} size="2x" />
         </a>
       </li>
       <li>
@@ -103,7 +94,7 @@ const Header = () => (
           target="_blank"
           rel="noopener norefferer"
         >
-          <FontAwesomeIcon icon={faLinkedin} size="3x" />
+          <FontAwesomeIcon icon={faLinkedin} size="2x" />
         </a>
       </li>
     </ul>
