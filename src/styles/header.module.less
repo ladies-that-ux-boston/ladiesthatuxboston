@@ -3,15 +3,15 @@
 
 header {
 	// grid-def inline
+	background: @white;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
-	margin-top: 1rem;
 	.px-rem-padding(20, 16, 20, 16);
 
 	svg {
-		// width: 100px;
+		height: 30px;
 	}
 
 	.navLinks {
@@ -34,6 +34,44 @@ header {
 				}
 			}
 		}
+	}
+}
+
+.socialLinks {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+
+	li {
+		margin: 0 0.75rem;
+
+		&:first-of-type {
+			margin-left: 0;
+		}
+
+		&:last-of-type {
+			margin-right: 0;
+		}
+	}
+
+	a {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		color: @black;
+		transition: ease-in-out .3s;
+
+		&:hover, &:active {
+			color: @primary-red;
+		}
+	}
+}
+
+@media only screen and (min-width: @tablet) {
+	header {
+		// justify-content: flex-end;
+		padding: 0;
+		margin-top: 1rem;
 	}
 
 	.socialLinks {
@@ -60,12 +98,5 @@ header {
 				color: @primary-red;
 			}
 		}
-	}
-}
-
-@media only screen and (min-width: @tablet) {
-	header {
-		// justify-content: flex-end;
-		padding: 0;
 	}
 }

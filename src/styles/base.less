@@ -114,3 +114,34 @@ a {
 strong {
     font-variation-settings: @source-sans-bold;
 }
+
+// external mobile menu library overrides
+.bm-burger-bars {
+    background: @black;
+}
+
+.bm-burger-button {
+    z-index: 1000;
+    position: fixed;
+    width: 36px;
+    height: 30px;
+    right: 20px;
+    top: 20px;
+}
+
+.bm-menu-wrap {
+    background: @white;
+    .px-rem-padding(20, 16, 20, 16);
+}
+
+.bm-item-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    ul {
+        li {
+            line-height: 2;
+        }
+    }
+}
