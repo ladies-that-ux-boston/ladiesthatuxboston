@@ -7,6 +7,7 @@ module.exports = {
     siteUrl: 'https://www.ladiesthatuxboston.com',
   },
   plugins: [
+    'gatsby-plugin-eslint',
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-less',
     'gatsby-plugin-sitemap',

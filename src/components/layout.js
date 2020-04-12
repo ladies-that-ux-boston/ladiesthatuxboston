@@ -6,13 +6,14 @@
  * See: https://www.gatsbyjs.org/docs/static-query/
  */
 
-import React from 'react';
-import PropTypes from 'prop-types';
-import { StaticQuery, graphql } from 'gatsby';
-
-import Header from './header';
-import Footer from './footer';
-import styles from '../styles/layout.module.less';
+import React from "react";
+import PropTypes from "prop-types";
+import { StaticQuery, graphql } from "gatsby";
+import { Breakpoint, BreakpointProvider } from "react-socks";
+import Header from "./header";
+import Footer from "./footer";
+import styles from "../styles/layout.module.less";
+import Sidebar from "./sidebar";
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -27,9 +28,19 @@ const Layout = ({ children }) => (
     `}
     render={data => (
       <>
-        <div className={styles.pageWrap}>
-          <Header siteTitle={data.site.siteMetadata.title} />
-          <main>{children}</main>
+        <div className={styles.pageWrap} id="page-wrap">
+          <BreakpointProvider>
+            <Breakpoint medium up style={{ gridArea: "header" }}>
+              <Header siteTitle={data.site.siteMetadata.title} />
+            </Breakpoint>
+            <Breakpoint small down>
+              <Sidebar
+                pageWrapId={"page-wrap"}
+                outerContainerId={"main-wrap"}
+              />
+            </Breakpoint>
+          </BreakpointProvider>
+          <main id="main-wrap">{children}</main>
           <Footer />
         </div>
       </>
@@ -38,7 +49,7 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired,
+  children: PropTypes.node.isRequired
 };
 
 export default Layout;
