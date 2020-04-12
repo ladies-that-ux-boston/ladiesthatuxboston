@@ -13,8 +13,8 @@ body {
 
 h1,
 .header1 {
-    font-family: @heading-font;
-    font-variation-settings: @heading-font-weight-bold;
+    font-family: @base-font;
+    font-weight: 700;
     color: @black;
     line-height: @smallerLineHeight;
     margin-top: 0;
@@ -32,7 +32,7 @@ h1,
 
 h2,
 .header2 {
-    font-family: @heading-font;
+    font-family: @base-font;
     color: @black;
     line-height: @baseLineHeight;
     margin-top: 0;
@@ -43,9 +43,7 @@ h2,
 
 h3,
 .header3 {
-    font-family: @cabin-italic;
-    font-variation-settings: @cabin-regular-italic;
-    font-style: italic;
+    font-family: @base-font;
     color: @black;
     line-height: @baseLineHeight;
     margin-top: 0;
@@ -109,10 +107,6 @@ a {
 
 .textCenter {
     text-align: center;
-}
-
-strong {
-    font-variation-settings: @source-sans-bold;
 }
 
 // external mobile menu library overrides
