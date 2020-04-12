@@ -17,7 +17,7 @@ import styles from "../styles/layout.module.less";
 import Sidebar from "./sidebar";
 import LogoHorizontal from "./logo-horizontal";
 
-const Layout = ({ children }) => (
+const Layout = ({ children, className }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
@@ -50,7 +50,9 @@ const Layout = ({ children }) => (
               </header>
             </Breakpoint>
 
-            <main id="main-wrap">{children}</main>
+            <main id="main-wrap" className={className}>
+              {children}
+            </main>
             <Footer />
           </div>
         </BreakpointProvider>
@@ -60,7 +62,18 @@ const Layout = ({ children }) => (
 );
 
 Layout.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
+  className: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.bool,
+    PropTypes.object,
+    PropTypes.string,
+    PropTypes.node
+  ])
+};
+
+Layout.defaultProps = {
+  className: null
 };
 
 export default Layout;

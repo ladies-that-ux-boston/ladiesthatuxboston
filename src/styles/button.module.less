@@ -1,0 +1,89 @@
+@import '_variables';
+@import '_mixins';
+
+.button {
+    background-color: @black;
+    border: 1px solid transparent;
+    border-radius: @border-radius;
+    color: @white;
+    display: inline-block;
+    position: relative;
+    cursor: pointer;
+    .px-rem(min-height, 44);
+    .px-rem(font-size, 18);
+    .px-em-padding(15, 20, 15, 20);
+
+    &:hover {
+        transition: @transition;
+    }
+
+    &:focus {
+        .a11yOutline;
+    }
+
+    &.primary {
+        background-color: @primary-red;
+        color: @white;
+
+        &:hover,
+        &:active {
+            background-color: @primary-red-dark;
+            color: @white;
+        }
+
+        &.ghost {
+            background-color: @white;
+            border: 1px solid @primary-red;
+            color: @primary-red;
+
+            &:hover,
+            &:active {
+                background-color: @lightgray;
+            }
+        }
+    }
+
+    &.secondary {
+        background-color: @primary-teal;
+        color: @white;
+
+        &:hover,
+        &:active {
+            background-color: @primary-teal-dark;
+        }
+
+        &.ghost {
+            background-color: @white;
+            border: 1px solid @primary-teal;
+            color: @primary-teal;
+
+            &:hover,
+            &:active {
+                background-color: @lightgray;
+            }
+        }
+    }
+
+    &.fullWidth {
+        width: 100%;
+    }
+
+    &.small {
+        .px-rem(font-size, 14);
+        .px-em-padding(8, 20, 8, 20);
+    }
+
+    &.defaultSize {
+        .px-rem(font-size, 18);
+        .px-em-padding(12, 20, 12, 20);
+    }
+
+    &.large {
+        .px-rem(font-size, 20);
+        .px-em-padding(12, 20, 12, 20);
+    }
+
+    &.link {
+        text-decoration: none;
+    }
+}
