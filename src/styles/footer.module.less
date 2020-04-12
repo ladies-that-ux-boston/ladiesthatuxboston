@@ -8,13 +8,11 @@ footer {
     .px-rem-padding(20, 16, 20, 16);
     .fontSize(16px);
 
-    .navLinksWrap {
+    .footerFlex {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-
-        li:not(:first-of-type) {
-            padding: 0 1rem;
-        }
+        justify-content: space-between;
+        .px-rem(padding-top, 16);
     }
 }
