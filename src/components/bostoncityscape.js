@@ -45,7 +45,7 @@ const BostonCityScape = () => (
       />
       <img
         xmlnsXlink="http://www.w3.org/1999/xlink"
-        xlinkXref="https://ladiesthatuxboston.com/bostonbuildings.svg"
+        xlinkxref="https://ladiesthatuxboston.com/bostonbuildings.svg"
         x="0"
         y="0"
         width="100%"
