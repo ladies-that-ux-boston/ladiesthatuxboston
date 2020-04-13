@@ -31,30 +31,29 @@ const Layout = ({ children, className }) => (
     render={data => (
       <>
         <BreakpointProvider>
-          <Breakpoint small down>
+          <Breakpoint
+            small
+            down
+            style={{
+              display: "flex",
+              alignItems: "center",
+              position: "sticky",
+              top: "20",
+              zIndex: "999",
+              background: "white",
+              height: "70px",
+              borderBottom: "solid 1px black"
+            }}
+          >
             <Sidebar pageWrapId={"page-wrap"} />
+            <Link to="/" className={styles.logo}>
+              <LogoHorizontal />
+            </Link>
           </Breakpoint>
           <div className={styles.pageWrap} id="page-wrap">
             <Breakpoint medium up style={{ gridArea: "header" }}>
               <Header siteTitle={data.site.siteMetadata.title} />
             </Breakpoint>
-            <Breakpoint
-              small
-              down
-              style={{
-                gridArea: "header",
-                position: "sticky",
-                top: "20",
-                zIndex: "999"
-              }}
-            >
-              <header className={styles.header}>
-                <Link to="/">
-                  <LogoHorizontal />
-                </Link>
-              </header>
-            </Breakpoint>
-
             <main id="main-wrap" className={className}>
               {children}
             </main>
