@@ -41,7 +41,12 @@ const Layout = ({ children, className }) => (
             <Breakpoint
               small
               down
-              style={{ gridArea: "header", position: "sticky", top: "0" }}
+              style={{
+                gridArea: "header",
+                position: "sticky",
+                top: "20",
+                zIndex: "999"
+              }}
             >
               <header className={styles.header}>
                 <Link to="/">

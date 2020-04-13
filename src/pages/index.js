@@ -2,35 +2,11 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Layout from "../components/layout";
-import { useStaticQuery, graphql } from "gatsby";
 import SEO from "../components/seo";
 import classnames from "clsx";
-import Img from "gatsby-image";
 import styles from "../styles/home.module.less";
 import buttonStyles from "../styles/button.module.less";
 import EmailSignup from "../components/emailsignup";
-
-const Image = () => {
-  const data = useStaticQuery(graphql`
-    query {
-      placeholderImage: file(relativePath: { eq: "boston-cityscape.jpg" }) {
-        childImageSharp {
-          fluid(maxWidth: 500) {
-            ...GatsbyImageSharpFluid
-          }
-        }
-      }
-    }
-  `);
-
-  return (
-    <Img
-      fluid={data.placeholderImage.childImageSharp.fluid}
-      style={{}}
-      alt="Ladies that UX Boston Cityscape"
-    />
-  );
-};
 
 const IndexPage = () => (
   <Layout className={styles.homeWrap}>
@@ -59,7 +35,7 @@ const IndexPage = () => (
         </a>
       </div>
       <div className={styles.heroImage}>
-        <Image />
+        <img src={"/bostoncityvector.svg"} />
       </div>
     </section>
     <section className={styles.emailSignupWrap}>

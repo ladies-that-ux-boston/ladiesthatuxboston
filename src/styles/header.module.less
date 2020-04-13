@@ -4,6 +4,7 @@
 header {
 	// grid-def inline
 	background: @white;
+	border-bottom: solid 1px @lightgray;
 	display: flex;
 	flex-wrap: wrap;
 	align-items: center;
@@ -69,7 +70,8 @@ header {
 
 @media only screen and (min-width: @tablet) {
 	header {
-		margin-top: 1rem;
+		margin-top: 1.5rem;
+		border-bottom: none;
 
 		svg {
 			height: 60px;
