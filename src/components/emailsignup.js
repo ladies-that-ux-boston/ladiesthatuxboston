@@ -12,31 +12,28 @@ export default class EmailSignup extends React.Component {
     email: null
   };
 
-  _handleChange = e => {
-    console.log({
-      [`${e.target.name}`]: e.target.value
-    });
+  _handleChange = event => {
     this.setState({
-      [`${e.target.name}`]: e.target.value
+      [`${event.target.name}`]: event.target.value
     });
   };
 
-  _handleSubmit = e => {
-    e.preventDefault();
+  //   handleSubmit = event => {
+  //     event.preventDefault();
+  //     alert(`Welcome ${this.state.firstName} ${this.state.lastName}!`);
+  //   };
 
-    console.log("submit", this.state);
+  _handleSubmit = event => {
+    event.preventDefault();
 
     addToMailchimp(this.state.email, this.state)
       .then(({ msg, result }) => {
-        // console.log("msg", `${result}: ${msg}`);
-
         if (result !== "success") {
           throw msg;
         }
         alert(msg);
       })
       .catch(err => {
-        // console.log("err", err);
         alert(err);
       });
   };
@@ -53,7 +50,11 @@ export default class EmailSignup extends React.Component {
             className={inputStyles.input}
           />
           <button
-            className={classnames(buttonStyles.button, buttonStyles.secondary)}
+            className={classnames(
+              buttonStyles.button,
+              buttonStyles.secondary,
+              buttonStyles.input
+            )}
             type="submit"
           >
             Sign Up

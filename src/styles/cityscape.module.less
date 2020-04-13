@@ -1,0 +1,100 @@
+@import '_variables';
+@import '_mixins';
+
+.citgofill {
+	fill: #ff5d40;
+}
+
+.arc {
+  height: 200px;
+  width: 800px;
+  border-bottom-left-radius: 300px * 2;
+  border-bottom-right-radius: 300px * 2;
+  background: blue;
+  animation:
+      morph 12s ease-in-out infinite both alternate;
+}
+
+.waterbase {
+  fill: #20bcba;
+  visibility: hidden;
+}
+
+.watermid {
+	fill: #b6e9e8;
+  visibility: hidden;
+  animation:
+      morph 12s ease-in-out infinite both alternate;
+}
+
+.watertop {
+   fill: #b6e9e8;
+   visibility: hidden;
+}
+
+.boat1, .boat2, .boat3 {
+	fill: black;
+}
+
+.buildingshadow {
+   opacity: .25;
+   fill: #1c9b94;
+}
+
+.c-picto {
+ width: 160px;
+ height: 160px;
+ position: relative;
+ border: none;
+ transition: all .3s ease-in-out;
+ opacity: 1;
+
+  &::after {
+    content: '';
+    display: block;
+    min-height: 160px;
+    min-width: 160px;
+    background-color: #D2F2FF;
+    opacity: .3;
+    transition: opacity .6s ease-in-out;
+    animation:
+      morph 12s ease-in-out infinite both alternate,
+      move 8s ease-in-out infinite both;
+    animation-play-state: paused;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+    &::after {
+      opacity: 1;
+      transition: opacity .6s ease-in-out;
+      animation-play-state: running;
+    }
+  }
+}
+
+
+@keyframes morph
+{
+    0%,
+    100% { border-radius: 63% 37% 54% 46% / 55% 48% 52% 45%; }
+    14% { border-radius: 40% 60% 54% 46% / 49% 60% 40% 51%; }
+    28% { border-radius: 54% 46% 38% 62% / 49% 70% 30% 51%; }
+    42% { border-radius: 61% 39% 55% 45% / 61% 38% 62% 39%; }
+    56% { border-radius: 61% 39% 67% 33% / 70% 50% 50% 30%; }
+    70% { border-radius: 50% 50% 34% 66% / 56% 68% 32% 44%; }
+    84% { border-radius: 46% 54% 50% 50% / 35% 61% 39% 65%; }
+}
+
+@keyframes move {
+  0%,
+  100% { transform: none; }
+  50% { transform: rotateY(10deg); }
+}
+
+@keyframes flop {
+  0%{ transform: scale(1.1); }
+  50%{ transform: scale(1);}
+  90%{ transform: scale(1.12); }
+  100%{ transform: scale(1.1); }
+}
