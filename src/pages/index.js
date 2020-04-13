@@ -4,12 +4,11 @@ import React from "react";
 import Layout from "../components/layout";
 import { useStaticQuery, graphql } from "gatsby";
 import SEO from "../components/seo";
+import classnames from "clsx";
 import Img from "gatsby-image";
 import styles from "../styles/home.module.less";
 import buttonStyles from "../styles/button.module.less";
-// import Contact from '../components/contact';
-// import Social from "../components/social";
-// import Description from "../components/ltuxdesc";
+import EmailSignup from "../components/emailsignup";
 
 const Image = () => {
   const data = useStaticQuery(graphql`
@@ -38,10 +37,10 @@ const IndexPage = () => (
     <SEO title="Home" keywords={["gatsby", "application", "react"]} />
     <section className={styles.heroWrap}>
       <div className={styles.headline}>
-        <h1 className="h2">
+        <h1 className="h2 mg-btm-md">
           Monthly UX meetup featuring female and non-binary speakers
         </h1>
-        <p>
+        <p className="mg-btm-md">
           Open to all genders and experience levels, we cover topics like
           design, research and career development
         </p>
@@ -50,18 +49,26 @@ const IndexPage = () => (
           alt="meetup"
           target="_blank"
           rel="noopener noreferrer"
-          className={buttonStyles.button}
+          className={classnames(
+            buttonStyles.button,
+            buttonStyles.link,
+            buttonStyles.primary
+          )}
         >
-          events
+          Events
         </a>
       </div>
       <div className={styles.heroImage}>
         <Image />
       </div>
     </section>
-
-    {/* <Description />
-    <Social /> */}
+    <section className={styles.emailSignupWrap}>
+      <h2 className="mg-btm-md">Join our monthly newsletter</h2>
+      <p className="mg-btm-md">
+        We’ll send you job listings, news about upcoming events and our #WCW
+      </p>
+      <EmailSignup />
+    </section>
   </Layout>
 );
 

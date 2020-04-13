@@ -15,6 +15,20 @@
     outline-offset: -2px;
 }
 
+// error state outline
+.errorOutline {
+    outline: solid 2px @primary-red;
+    outline-offset: -2px;
+}
+
+// this visually hides a label/text for a11y
+.screenReaderLabel {
+    font-size: 0;
+    height: 0px; // test this
+    overflow: hidden;
+    display: block;
+}
+
 /**
  * @font-face LESS Mixin
  * use: .font-fa *   @file-path,   // absolute/relative URL to font files

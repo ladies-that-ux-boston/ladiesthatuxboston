@@ -1,0 +1,60 @@
+@import '_variables';
+@import '_mixins';
+
+.input {
+    &::-webkit-input-placeholder,
+    &::placeholder {
+        color: @bodylight;
+        opacity: 1;
+    }
+
+    &:active, &:focus {
+        .a11yOutline;
+    }
+
+    &:disabled {
+        background-color: var(--input-base-disabled-background-color);
+        border-color: var(--input-base-disabled-border-color);
+        color: var(--input-base-disabled-color);
+        cursor: not-allowed;
+        outline: none;
+    }
+
+    border: solid 1px @bodylight;
+    border-radius: 0;
+    color: @bodylight;
+    font-size: 1rem;
+    .px-rem(min-height, 44);
+    .px-rem(font-size, 16);
+    .px-em-padding(8, 20, 8, 20);
+}
+
+.error {
+    border: solid 1px transparent;
+    .errorOutline;
+
+    &:invalid {
+        box-shadow: none;
+    }
+}
+
+// visually hides label
+.inputlabelHidden {
+    margin-bottom: 0;
+    .screenReaderLabel;
+}
+
+// base input label
+.inputLabel {
+    font-size: var(--input-base-label-font-size);
+    font-weight: var(--input-base-label-font-weight);
+    color: var(--input-base-label-text-color);
+    margin-bottom: var(--input-base-label-margin-y);
+    display: inline-block;
+}
+
+// base input wrap
+.inputWrap {
+    display: flex;
+    flex-direction: column;
+}
