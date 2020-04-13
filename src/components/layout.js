@@ -9,13 +9,11 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Link } from "gatsby";
 import { Breakpoint, BreakpointProvider } from "react-socks";
 import Header from "./header";
 import Footer from "./footer";
 import styles from "../styles/layout.module.less";
 import Sidebar from "./sidebar";
-import LogoHorizontal from "./logo-horizontal";
 
 const Layout = ({ children, className }) => (
   <StaticQuery
@@ -31,24 +29,29 @@ const Layout = ({ children, className }) => (
     render={data => (
       <>
         <BreakpointProvider>
-          <Breakpoint
-            small
-            down
-            style={{
-              display: "flex",
-              alignItems: "center",
-              position: "sticky",
-              top: "20",
-              zIndex: "999",
-              background: "white",
-              height: "70px",
-              borderBottom: "solid 1px black"
-            }}
-          >
+          <Breakpoint small down>
+            <div
+              style={{
+                position: "fixed",
+                width: "50px",
+                height: "45px",
+                right: "13px",
+                top: "13px",
+                background: "white",
+                zIndex: "999"
+              }}
+            >
+              <div
+                style={{
+                  position: "absolute",
+                  width: "100%",
+                  height: "100%",
+                  left: "0",
+                  top: "0"
+                }}
+              ></div>
+            </div>
             <Sidebar pageWrapId={"page-wrap"} />
-            <Link to="/" className={styles.logo}>
-              <LogoHorizontal />
-            </Link>
           </Breakpoint>
           <div className={styles.pageWrap} id="page-wrap">
             <Breakpoint medium up style={{ gridArea: "header" }}>
