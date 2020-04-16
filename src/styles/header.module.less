@@ -1,15 +1,30 @@
 @import "_variables.less";
 @import "_mixins.less";
 
+#open {
+	display: block;
+}
+
 header {
+	display: grid;
+	grid-template-columns: repeat(2, min-content);
 	// grid-def inline
 	background: @white;
 	border-bottom: solid 1px @lightgray;
-	display: flex;
+	//display: flex;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: space-between;
 	.px-rem-padding(20, 16, 20, 16);
+
+	.responsiveNav {
+		display: none;
+		grid-column: '1/-1';
+
+		&#open {
+			display: block;
+		}
+	}
 
 	.navLinks {
 		display: flex;

@@ -9,11 +9,9 @@
 import React from "react";
 import PropTypes from "prop-types";
 import { StaticQuery, graphql } from "gatsby";
-import { Breakpoint, BreakpointProvider } from "react-socks";
 import Header from "./header";
 import Footer from "./footer";
 import styles from "../styles/layout.module.less";
-import Sidebar from "./sidebar";
 
 const Layout = ({ children, className }) => (
   <StaticQuery
@@ -28,41 +26,13 @@ const Layout = ({ children, className }) => (
     `}
     render={data => (
       <>
-        <BreakpointProvider>
-          <Breakpoint small down>
-            <div
-              style={{
-                position: "fixed",
-                width: "50px",
-                height: "45px",
-                right: "13px",
-                top: "13px",
-                background: "white",
-                zIndex: "999"
-              }}
-            >
-              <div
-                style={{
-                  position: "absolute",
-                  width: "100%",
-                  height: "100%",
-                  left: "0",
-                  top: "0"
-                }}
-              ></div>
-            </div>
-            <Sidebar pageWrapId={"page-wrap"} />
-          </Breakpoint>
-          <div className={styles.pageWrap} id="page-wrap">
-            <Breakpoint medium up style={{ gridArea: "header" }}>
-              <Header siteTitle={data.site.siteMetadata.title} />
-            </Breakpoint>
-            <main id="main-wrap" className={className}>
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </BreakpointProvider>
+        <div className={styles.pageWrap} id="page-wrap">
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <main id="main-wrap" className={className}>
+            {children}
+          </main>
+          <Footer />
+        </div>
       </>
     )}
   />
