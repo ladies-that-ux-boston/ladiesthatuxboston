@@ -1,6 +1,8 @@
 /* eslint-disable max-len */
 /* eslint-disable react/no-unescaped-entities */
+/* eslint-disable react/prop-types */
 import React from "react";
+import { graphql } from "gatsby";
 import Layout from "../components/layout";
 // import { Link } from "gatsby";
 // import { Breakpoint, BreakpointProvider } from "react-socks";
@@ -10,8 +12,9 @@ import classnames from "clsx";
 import styles from "../styles/home.module.less";
 import buttonStyles from "../styles/button.module.less";
 import EmailSignup from "../components/emailsignup";
+import MediumFeed from "../components/mediumfeed";
 
-const IndexPage = () => (
+const IndexPage = ({ data }) => (
   <Layout className={styles.homeWrap}>
     <SEO title="Home" keywords={["gatsby", "application", "react"]} />
 
@@ -49,7 +52,29 @@ const IndexPage = () => (
       </p>
       <EmailSignup />
     </section>
+    <MediumFeed data={data} />
   </Layout>
 );
 
 export default IndexPage;
+
+export const pageQuery = graphql`
+  query {
+    allMediumPost(limit: 3, sort: { fields: [createdAt], order: DESC }) {
+      edges {
+        node {
+          id
+          title
+          author {
+            name
+          }
+          virtuals {
+            previewImage {
+              imageId
+            }
+          }
+        }
+      }
+    }
+  }
+`;

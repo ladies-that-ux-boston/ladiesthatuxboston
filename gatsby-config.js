@@ -12,6 +12,12 @@ module.exports = {
     "gatsby-plugin-less",
     "gatsby-plugin-sitemap",
     {
+      resolve: `gatsby-source-medium`,
+      options: {
+        username: `ltuxbos`
+      }
+    },
+    {
       resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
