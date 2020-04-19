@@ -2,10 +2,10 @@
 @import '_mixins';
 
 .button {
-    background-color: @black;
+    background-color: transparent;
     border: 1px solid transparent;
     border-radius: @border-radius;
-    color: @white;
+    color: @black;
     display: inline-block;
     position: relative;
     cursor: pointer;
@@ -66,6 +66,10 @@
 
     &.fullWidth {
         width: 100%;
+    }
+
+    &.iconOnly {
+        .px-em-padding(8, 8, 8, 8);
     }
 
     &.small {

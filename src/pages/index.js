@@ -2,9 +2,9 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import Layout from "../components/layout";
-import { Link } from "gatsby";
-import { Breakpoint, BreakpointProvider } from "react-socks";
-import LogoHorizontal from "../components/logo-horizontal";
+// import { Link } from "gatsby";
+// import { Breakpoint, BreakpointProvider } from "react-socks";
+// import LogoHorizontal from "../components/logo-horizontal";
 import SEO from "../components/seo";
 import classnames from "clsx";
 import styles from "../styles/home.module.less";
@@ -17,13 +17,6 @@ const IndexPage = () => (
 
     <section className={styles.heroWrap}>
       <div className={styles.headline}>
-        <BreakpointProvider>
-          <Breakpoint small down style={{ gridArea: "header" }}>
-            <Link to="/" className={styles.logo}>
-              <LogoHorizontal />
-            </Link>
-          </Breakpoint>
-        </BreakpointProvider>
         <h1 className="h2 mg-btm-md">
           Monthly UX meetup featuring female and non-binary speakers
         </h1>

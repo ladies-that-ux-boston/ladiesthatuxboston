@@ -4,10 +4,15 @@
 import PropTypes from "prop-types";
 import { Link } from "gatsby";
 import React from "react";
+import classnames from "clsx";
+import buttonStyles from "../styles/button.module.less";
 import styles from "../styles/header.module.less";
 import NavLinks from "./navlinks";
+import { Breakpoint, BreakpointProvider } from "react-socks";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SocialLinks from "./sociallinks";
 import LogoHorizontal from "./logo-horizontal";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 export default class Header extends React.Component {
   constructor(props) {
@@ -29,10 +34,17 @@ export default class Header extends React.Component {
         <Link to="/">
           <LogoHorizontal />
         </Link>
-        <button onClick={this.toggle.bind(this)}>
-          {/* {this.state.isToggleOn ? "ON" : "OFF"} */}
-          yo
-        </button>
+        <BreakpointProvider>
+          <Breakpoint small down>
+            <button
+              className={classnames(buttonStyles.button, buttonStyles.iconOnly)}
+              onClick={this.toggle.bind(this)}
+            >
+              <FontAwesomeIcon icon={faBars} size="2x" />
+            </button>
+          </Breakpoint>
+        </BreakpointProvider>
+
         <div id="js-menu" className={navClass.join(" ")}>
           <span className={styles.navLinks}>
             <NavLinks />
