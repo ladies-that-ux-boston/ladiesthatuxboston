@@ -8,7 +8,7 @@ import classnames from "clsx";
 import buttonStyles from "../styles/button.module.less";
 import styles from "../styles/header.module.less";
 import NavLinks from "./navlinks";
-import { Breakpoint, BreakpointProvider } from "react-socks";
+// import { Breakpoint, BreakpointProvider } from "react-socks";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import SocialLinks from "./sociallinks";
 import LogoHorizontal from "./logo-horizontal";
@@ -34,16 +34,16 @@ export default class Header extends React.Component {
         <Link to="/">
           <LogoHorizontal />
         </Link>
-        <BreakpointProvider>
-          <Breakpoint small down>
-            <button
-              className={classnames(buttonStyles.button, buttonStyles.iconOnly)}
-              onClick={this.toggle.bind(this)}
-            >
-              <FontAwesomeIcon icon={faBars} size="2x" />
-            </button>
-          </Breakpoint>
-        </BreakpointProvider>
+        <button
+          className={classnames(
+            buttonStyles.button,
+            buttonStyles.iconOnly,
+            styles.mobileMenuButton
+          )}
+          onClick={this.toggle.bind(this)}
+        >
+          <FontAwesomeIcon icon={faBars} size="2x" />
+        </button>
 
         <div id="js-menu" className={navClass.join(" ")}>
           <span className={styles.navLinks}>

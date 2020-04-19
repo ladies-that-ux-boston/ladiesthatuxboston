@@ -17,10 +17,10 @@ const IndexPage = () => (
 
     <section className={styles.heroWrap}>
       <div className={styles.headline}>
-        <h1 className="h2 mg-btm-md">
+        <h1 className="h2 mg-btm-md white-trnsp-bg">
           Monthly UX meetup featuring female and non-binary speakers
         </h1>
-        <p className="mg-btm-md">
+        <p className="mg-btm-md white-trnsp-bg">
           Open to all genders and experience levels, we cover topics like
           design, research and career development
         </p>

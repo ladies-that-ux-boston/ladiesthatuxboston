@@ -1,10 +1,6 @@
 @import "_variables.less";
 @import "_mixins.less";
 
-// #open {
-// 	display: block;
-// }
-
 header {
 	display: grid;
 	grid-template-columns: repeat(2, min-content);
@@ -21,14 +17,9 @@ header {
 		height: 40px;
 	}
 
-	// .responsiveNav {
-	// 	display: none;
-	// 	grid-column: ~'1/-1';
-
-	// 	&#open {
-	// 		display: block;
-	// 	}
-	// }
+	.mobileMenuButton {
+		visibility: visible;
+	}
 
 	.navLinks {
 		display: flex;
@@ -85,6 +76,10 @@ header {
 
 		svg {
 			height: 60px;
+		}
+
+		.mobileMenuButton {
+			visibility: hidden;
 		}
 
 		.navLinks {
