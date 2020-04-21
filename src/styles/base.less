@@ -11,38 +11,54 @@ body {
     color: @body;
 }
 
+
+// h1 {
+//   margin-top: 0;
+//   font-size: 2.488em;
+// }
+
+// h2 {font-size: 2.074em;}
+
+// h3 {font-size: 1.728em;}
+
+// h4 {font-size: 1.44em;}
+
+// h5 {font-size: 1.2em;}
+
 h1,
-.header1 {
+.h1 {
     font-family: @base-font;
     font-weight: 700;
     color: @black;
     line-height: @smallerLineHeight;
     margin-top: 0;
     margin-bottom: 0;
-    .fontSize(46);
+    font-size: clamp(2rem, 2.488rem, 3rem);
+    // .fontSize(46);
 }
 
 @media only screen and (min-width: @tablet) {
     h1,
-    .header1 {
+    .h1 {
         letter-spacing: .04em;
-        .fontSize(48);
+        // .fontSize(48);
     }
 }
 
 h2,
-.header2 {
+.h2 {
     font-family: @base-font;
     color: @black;
     line-height: @baseLineHeight;
     margin-top: 0;
     margin-bottom: 0;
     letter-spacing: .04em;
-    .fontSize(36);
+    font-size: clamp(2rem, 2.074rem, 2.25rem)
+    // .fontSize(36);
 }
 
 h3,
-.header3 {
+.h2 {
     font-family: @base-font;
     color: @black;
     line-height: @baseLineHeight;
@@ -52,7 +68,7 @@ h3,
 }
 
 h4,
-.header4 {
+.h4 {
     font-family: @base-font;
     color: @black;
     line-height: @baseLineHeight;
@@ -62,7 +78,7 @@ h4,
 }
 
 h5,
-.header5 {
+.h5 {
     font-family: @base-font;
     color: @black;
     line-height: @baseLineHeight;

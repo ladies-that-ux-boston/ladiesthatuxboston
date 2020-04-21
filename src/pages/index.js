@@ -20,7 +20,7 @@ const IndexPage = ({ data }) => (
 
     <section className={styles.heroWrap}>
       <div className={styles.headline}>
-        <h1 className="h2 mg-btm-md white-trnsp-bg">
+        <h1 className="mg-btm-md white-trnsp-bg">
           Monthly UX meetup featuring female and non-binary speakers
         </h1>
         <p className="mg-btm-md white-trnsp-bg">
@@ -73,6 +73,7 @@ export const pageQuery = graphql`
               imageId
             }
           }
+          uniqueSlug
         }
       }
     }

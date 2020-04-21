@@ -4,7 +4,7 @@ module.exports = {
     description:
       "Ladies that UX Boston (LTUX Boston) is a meetup group for people interested in user experience and other design topics in the Boston area",
     author: "@katielangerman",
-    siteUrl: "https://www.ladiesthatuxboston.com"
+    siteUrl: "https://www.ladiesthatuxboston.com",
   },
   plugins: [
     "gatsby-plugin-eslint",
@@ -14,30 +14,30 @@ module.exports = {
     {
       resolve: `gatsby-source-medium`,
       options: {
-        username: `ltuxbos`
-      }
+        username: `ltuxbos`,
+      },
     },
-    {
-      resolve: "gatsby-plugin-web-font-loader",
-      options: {
-        google: {
-          families: ["Muli"]
-        }
-      }
-    },
+    // {
+    //   resolve: "gatsby-plugin-web-font-loader",
+    //   options: {
+    //     google: {
+    //       families: ["Muli"]
+    //     }
+    //   }
+    // },
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {
         endpoint:
-          "https://ladiesthatux.us12.list-manage.com/subscribe/post?u=b96f7627f43794d6c133035bd&amp;id=8c099cce18"
-      }
+          "https://ladiesthatux.us12.list-manage.com/subscribe/post?u=b96f7627f43794d6c133035bd&amp;id=8c099cce18",
+      },
     },
     {
       resolve: "gatsby-source-filesystem",
       options: {
         name: "images",
-        path: `${__dirname}/src/images`
-      }
+        path: `${__dirname}/src/images`,
+      },
     },
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
@@ -50,8 +50,8 @@ module.exports = {
         background_color: "#ff5d40",
         theme_color: "#ff5d40",
         display: "minimal-ui",
-        icon: "src/images/ltuxbostonicon.png" // This path is relative to the root of the site.
-      }
+        icon: "src/images/ltuxbostonicon.png", // This path is relative to the root of the site.
+      },
     },
     {
       resolve: "gatsby-plugin-google-analytics",
@@ -74,11 +74,11 @@ module.exports = {
         // Any additional create only fields (optional)
         sampleRate: 5,
         siteSpeedSampleRate: 10,
-        cookieDomain: "ladiesthatuxboston.com"
-      }
-    }
+        cookieDomain: "ladiesthatuxboston.com",
+      },
+    },
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
     // 'gatsby-plugin-offline',
-  ]
+  ],
 };
