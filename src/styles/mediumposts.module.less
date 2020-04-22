@@ -1,6 +1,11 @@
 @import '_variables';
 @import '_mixins';
 
+:root {
+  --gutter: 20px;
+  --scrollingbox-base-spacing-unit: 1rem;
+}
+
 .fullWidth {
     background: @primary-teal;
     color: @white;
@@ -16,11 +21,59 @@
 		    / .25fr 4fr .25fr;
 }
 
-.postsWrap {
+.itemList {
+    grid-column: 1 / -1;
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 3rem;
+  grid-gap: calc(var(--gutter) / 2);
+  grid-template-columns: 10px;
+  grid-template-rows: minmax(150px, 1fr);
+  grid-auto-flow: column;
+  grid-auto-columns: calc(50% - var(--gutter) * 2);
+
+  overflow-x: scroll;
+  scroll-snap-type: x proximity;
+  padding-bottom: calc(.75 * var(--gutter));
+  margin-bottom: calc(-.25 * var(--gutter));
+
+  &:before, &:after {
+        content: '';
+        width: 10px;
+    }
+}
+
+.postsWrap {
+    // display: grid;
+    // grid-template-columns: repeat(3, 1fr);
+    // grid-gap: 3rem;
     grid-area: section;
+    display: grid;
+    grid-gap: var(--scrollingbox-base-spacing-unit) 0;
+    grid-template-columns: var(--scrollingbox-base-spacing-unit) 1fr var(--scrollingbox-base-spacing-unit);
+    grid-template-rows: minmax(150px, 1fr);
+    align-content: start;
+    align-items: center;
+}
+
+.itemsWrap {
+    display: grid;
+    grid-gap: calc(var(--scrollingbox-base-spacing-unit) / 2);
+    // columns defined inline
+    grid-row: ~'1 / 2';
+    grid-template-rows: minmax(150px, 1fr);
+    overflow-x: scroll;
+    // space for the scrollbar
+    padding-bottom: calc(0.75 * var(--scrollingbox-base-spacing-unit));
+    padding-left: 0;
+    margin-bottom: calc(-0.25 * var(--scrollingbox-base-spacing-unit));
+    position: relative;
+    // prevents an outline if the scrollingbox contains buttons as items
+    outline: none;
+    grid-column: ~'1 / 4';
+
+    // creates twp empty columns for spacing when no arrows are present (mobile)
+    &:before, &:after {
+        content: '';
+    }
 }
 
 .postImgWrap {
@@ -40,3 +93,18 @@
     // width:100%;
     // height:100%;
 }
+
+// .item {
+//     scroll-snap-align: center;
+//     grid-row: span 1;
+//     // stretch items of different heights to be equal
+//     display: grid;
+// //   scroll-snap-align: center;
+// //   padding: calc(var(--gutter) / 2 * 1.5);
+// //   display: flex;
+// //   flex-direction: column;
+// //   justify-content: center;
+// //   align-items: center;
+// //   background: #fff;
+// //   border-radius: 8px;
+// }

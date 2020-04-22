@@ -1,0 +1,89 @@
+@import '_variables';
+@import '_mixins';
+
+.cgds_scrollingBox_wrapper {
+    display: grid;
+    grid-gap: var(--scrollingbox-base-spacing-unit) 0;
+    grid-template-columns: var(--scrollingbox-base-spacing-unit) 1fr var(--scrollingbox-base-spacing-unit);
+    grid-template-rows: minmax(150px, 1fr);
+    align-content: start;
+    align-items: center;
+}
+
+// styles with arrows
+.cgds_scrollingBox_wrapper_withArrows {
+    // right and left control buttons
+    .cgds_scrollingBox_button {
+        grid-row: ~'1 / 2';
+
+        &:first-of-type {
+            grid-column: ~'1 / 2';
+            justify-self: start;
+        }
+
+        &:last-of-type {
+            grid-column: ~'3 / 4';
+            justify-self: end;
+        }
+    }
+
+    // spans full width ie11 friendly
+    .cgds_scrollingBox_itemList {
+        grid-column: ~'1 / 4';
+
+        // removes first and last empty columns
+        // corresponds with inline style def
+        &:before, &:after {
+            content: none;
+        }
+    }
+}
+
+.cgds_scrollingBox_itemList {
+    display: grid;
+    grid-gap: calc(var(--scrollingbox-base-spacing-unit) / 2);
+    // columns defined inline
+    grid-row: ~'1 / 2';
+    grid-template-rows: minmax(150px, 1fr);
+    overflow-x: scroll;
+    // space for the scrollbar
+    padding-bottom: calc(0.75 * var(--scrollingbox-base-spacing-unit));
+    padding-left: 0;
+    margin-bottom: calc(-0.25 * var(--scrollingbox-base-spacing-unit));
+    position: relative;
+    // prevents an outline if the scrollingbox contains buttons as items
+    outline: none;
+    grid-column: ~'1 / 4';
+
+    // creates twp empty columns for spacing when no arrows are present (mobile)
+    &:before, &:after {
+        content: '';
+    }
+}
+
+.cgds_scrollingBox_item {
+    scroll-snap-align: center;
+    grid-row: span 1;
+    // stretch items of different heights to be equal
+    display: grid;
+}
+
+.cgds_scrollingBox_item_link {
+    a:focus {
+        // a11yOutline with modified offset
+        outline: solid 2px @link;
+        outline-offset: 0px;
+    }
+}
+
+
+// changes column definition to take the width of each button, making them appear outside of the scrolling box
+.cgds_scrollingBox_wrapper_arrowsOut {
+    grid-template-columns: min-content 1fr min-content;
+    grid-gap: var(--scrollingbox-base-spacing-unit) calc(var(--scrollingbox-base-spacing-unit) / 2);
+
+    // give col 1 and 4 to the buttons
+    .cgds_scrollingBox_itemList {
+        grid-column: ~'2 / 3';
+    }
+}
