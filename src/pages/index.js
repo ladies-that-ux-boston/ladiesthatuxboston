@@ -4,42 +4,12 @@
 import React from "react";
 import { graphql } from "gatsby";
 import Layout from "../components/layout";
-// import { Link } from "gatsby";
-// import { Breakpoint, BreakpointProvider } from "react-socks";
-// import LogoHorizontal from "../components/logo-horizontal";
 import SEO from "../components/seo";
 import classnames from "clsx";
 import styles from "../styles/home.module.less";
 import buttonStyles from "../styles/button.module.less";
 import EmailSignup from "../components/emailsignup";
 import MediumFeed from "../components/mediumfeed";
-// import ScrollingBox from "../components/ScrollingBox";
-
-// const mediumCDNUrl = `https://cdn-images-1.medium.com/max/600/`;
-// const mediumUrl = `https://medium.com/ltuxbos`;
-
-// export function MediumFeed({ data }) {
-//   <div className={styles.postsWrap}>
-//     {posts.map((post) => (
-//       <a
-//         href={`${mediumUrl}/${post.node.uniqueSlug}`}
-//         key={post.node.uniqueSlug}
-//       >
-//         <article key={post.node.id}>
-//           {/* <h3>by {post.node.author.name}</h3> */}
-//           {/* <div className={styles.postImgWrap}> */}
-//           <img
-//             src={`${mediumCDNUrl}/${post.node.virtuals.previewImage.imageId}`}
-//             alt={post.node.title}
-//             className={styles.postImg}
-//           />
-//           <p>{post.node.title}</p>
-//           {/* </div> */}
-//         </article>
-//       </a>
-//     ))}
-//   </div>
-// };
 
 const IndexPage = ({ data }) => (
   <Layout className={styles.homeWrap}>
@@ -79,7 +49,6 @@ const IndexPage = ({ data }) => (
       </p>
       <EmailSignup />
     </section>
-    {/* <ScrollingBox items={MediumFeed} data={data} /> */}
     <MediumFeed data={data} />
   </Layout>
 );

@@ -17,14 +17,6 @@ module.exports = {
         username: `ltuxbos`,
       },
     },
-    // {
-    //   resolve: "gatsby-plugin-web-font-loader",
-    //   options: {
-    //     google: {
-    //       families: ["Muli"]
-    //     }
-    //   }
-    // },
     {
       resolve: "gatsby-plugin-mailchimp",
       options: {

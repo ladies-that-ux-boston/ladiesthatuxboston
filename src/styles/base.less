@@ -11,7 +11,7 @@ body {
     color: @body;
 }
 
-
+// keep for clamp later
 // h1 {
 //   margin-top: 0;
 //   font-size: 2.488em;
@@ -33,14 +33,15 @@ h1,
     line-height: @smallerLineHeight;
     margin-top: 0;
     margin-bottom: 0;
-    font-size: clamp(2rem, 2.488rem, 3rem);
-    // .fontSize(46);
+    font-size: 2.488rem;
+    //.fontSize(46);
 }
 
 @media only screen and (min-width: @tablet) {
     h1,
     .h1 {
         letter-spacing: .04em;
+        font-size: 2.488rem;
         // .fontSize(48);
     }
 }
@@ -52,19 +53,20 @@ h2,
     line-height: @baseLineHeight;
     margin-top: 0;
     margin-bottom: 0;
-    letter-spacing: .04em;
-    font-size: clamp(2rem, 2.074rem, 2.25rem)
+    letter-spacing: .02em;
+    font-size: 2rem;
     // .fontSize(36);
 }
 
 h3,
-.h2 {
+.h3 {
     font-family: @base-font;
     color: @black;
     line-height: @baseLineHeight;
     margin-top: 0;
     margin-bottom: 0;
-    .fontSize(30);
+    font-size: 1.728rem;
+    //.fontSize(30);
 }
 
 h4,
