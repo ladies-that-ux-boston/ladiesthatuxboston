@@ -6,7 +6,7 @@ import {
   faTwitter,
   faInstagram,
   faLinkedin,
-  faMeetup
+  faMeetup,
 } from "@fortawesome/free-brands-svg-icons";
 
 export default function SocialLinks({ className }) {
@@ -19,6 +19,7 @@ export default function SocialLinks({ className }) {
           rel="noopener norefferer"
         >
           <FontAwesomeIcon icon={faMeetup} size="2x" />
+          <span className="visually-hidden">Meetup</span>
         </a>
       </li>
       <li>
@@ -28,6 +29,7 @@ export default function SocialLinks({ className }) {
           rel="noopener norefferer"
         >
           <FontAwesomeIcon icon={faTwitter} size="2x" />
+          <span className="visually-hidden">Twitter</span>
         </a>
       </li>
       <li>
@@ -37,6 +39,7 @@ export default function SocialLinks({ className }) {
           rel="noopener norefferer"
         >
           <FontAwesomeIcon icon={faInstagram} size="2x" />
+          <span className="visually-hidden">Instagram</span>
         </a>
       </li>
       <li>
@@ -46,6 +49,7 @@ export default function SocialLinks({ className }) {
           rel="noopener norefferer"
         >
           <FontAwesomeIcon icon={faLinkedin} size="2x" />
+          <span className="visually-hidden">LinkedIn</span>
         </a>
       </li>
     </ul>
@@ -58,10 +62,10 @@ SocialLinks.propTypes = {
     PropTypes.bool,
     PropTypes.object,
     PropTypes.string,
-    PropTypes.node
-  ])
+    PropTypes.node,
+  ]),
 };
 
 SocialLinks.defaultProps = {
-  className: null
+  className: null,
 };

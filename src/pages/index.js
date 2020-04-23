@@ -39,7 +39,11 @@ const IndexPage = ({ data }) => (
         </a>
       </div>
       <div className={styles.heroImage}>
-        <img src={"/bostoncityvector.svg"} />
+        <img
+          src={"/bostoncityvector.svg"}
+          alt="Boston cityscape illustration"
+          aria-hidden="true"
+        />
       </div>
     </section>
     <section className={styles.emailSignupWrap}>
