@@ -1,0 +1,74 @@
+@import "_variables";
+@import "_mixins";
+
+
+.aboutWrap {
+	section {
+		grid-column: ~'1/-1';
+	}
+
+	.heroWrap {
+		display: grid;
+		grid-gap: 0 2rem;
+		grid-template-columns: repeat(6, 1fr);
+		grid-template-rows: min-content;
+
+		.headline {
+			grid-column: ~'1/-1';
+			grid-row: ~'1/2';
+			z-index: 2;
+		}
+	}
+}
+
+.bioWrap {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 2rem;
+
+	p {
+		margin: 0.5rem 0 1rem 0;
+	}
+
+	.socialWrap {
+		display: flex;
+		flex-direction: row;
+
+		a:first-of-type {
+			margin-right: 1rem;
+		}
+	}
+}
+
+.break {
+	border-top: dotted 3px @bodylight;
+	padding-top: 3rem;
+}
+
+@media only screen and (min-width: @tablet) {
+	.aboutWrap {
+		margin-top: 1rem;
+
+		.heroWrap {
+			.headline {
+				grid-column: ~'1/4';
+				grid-row: ~'1/2';
+			}
+		}
+
+		.bioWrap {
+			grid-template-columns: repeat(3, 1fr);
+			grid-gap: 3rem;
+		}
+	}
+
+}
+
+@media only screen and (min-width: @desktop) {
+
+}
+
+@media only screen and (min-width: @lg-desktop) {
+
+
+}

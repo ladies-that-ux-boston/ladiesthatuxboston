@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "gatsby";
 
 const NavLinks = () => (
   <ul>
@@ -11,6 +12,9 @@ const NavLinks = () => (
       >
         meetup
       </a>
+    </li>
+    <li>
+      <Link to="about">about</Link>
     </li>
     <li>
       <a
