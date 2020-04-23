@@ -15,27 +15,17 @@
 }
 
 .itemList {
-  display: grid;
-  grid-gap: calc(var(--gutter) / 2);
-  grid-template-columns: 10px;
-  grid-template-rows: minmax(150px, 1fr);
-  grid-template-columns: repeat(3, minmax(300px, 1fr));
-  overflow-x: scroll;
-  scroll-snap-type: x proximity;
-  padding-bottom: ~'calc(.75 * var(--gutter))';
-  margin-bottom: ~'calc(-.25 * var(--gutter))';
-  grid-column: ~'1 / -1';
-  justify-items: center;
-
-  a {
-      &:hover,
-        &:focus {
-            text-decoration: underline;
-            color: @white;
-            transition: @transition
-        }
-  }
-
+    display: grid;
+    grid-gap: calc(var(--gutter) / 2);
+    grid-template-columns: 10px;
+    grid-template-rows: minmax(150px, 1fr);
+    grid-template-columns: repeat(3, minmax(300px, 1fr));
+    overflow-x: scroll;
+    scroll-snap-type: x proximity;
+    padding-bottom: ~'calc(.75 * var(--gutter))';
+    margin-bottom: ~'calc(-.25 * var(--gutter))';
+    grid-column: ~'1 / -1';
+    justify-items: center;
 }
 
 .fullWidth {
@@ -57,16 +47,26 @@
 }
 
 .mediumFeed {
-    text-align: center;
     padding: 2rem 0;
 
     h2, p {
          color: @white;
     }
+
+    a {
+    color: @white;
+        &:hover,
+        &:focus {
+            text-decoration: underline;
+            color: @white;
+            transition: @transition
+        }
+    }
 }
 
 .heading {
     grid-area: heading;
+    text-align: center;
 }
 
 .allPosts {

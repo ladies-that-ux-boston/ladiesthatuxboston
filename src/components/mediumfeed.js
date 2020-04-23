@@ -5,6 +5,8 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import classnames from "clsx";
 import styles from "../styles/mediumposts.module.less";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
 
 const mediumCDNUrl = `https://cdn-images-1.medium.com/max/600/`;
 const mediumUrl = `https://medium.com/ltuxbos`;
@@ -18,7 +20,16 @@ export default function MediumFeed({ data }) {
         <h2 className="mg-btm-md">Women Crush Wednesday #WCW</h2>
         <p className="mg-btm-md">
           Each month we feature one of our members in a post to learn more about
-          their career journeys!
+          their career journeys.{" "}
+          <a
+            href="https://docs.google.com/forms/d/e/1FAIpQLScx5mWwnqhqWYmLmndgUKzoXLHHqm9yR1RlfPt7zykMi8vnbA/viewform"
+            alt="Nominate our next feature"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Nominate our next feature{" "}
+            <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+          </a>
         </p>
       </div>
       <div className={styles.postsWrap}>
