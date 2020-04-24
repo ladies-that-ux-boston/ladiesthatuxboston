@@ -33,8 +33,10 @@ export default class EmailSignup extends React.Component {
         }
         alert(msg);
       })
-      .catch((err) => {
-        alert(err);
+      .catch(() => {
+        const myErrorToShow =
+          "Please provide a valid email address. If your email is valid, you may already be on the list!";
+        alert(myErrorToShow);
       });
   };
 
