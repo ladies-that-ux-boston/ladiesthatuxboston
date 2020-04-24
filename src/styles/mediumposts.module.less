@@ -83,7 +83,7 @@
 }
 
 .postImgWrap {
-    // background: @white;
+    background: @white;
 }
 
 .postImg {
@@ -99,3 +99,14 @@
     }
 }
 
+@media only screen and (min-width: @desktop) {
+    .postsWrap {
+        justify-items: center;
+    }
+
+    .itemList {
+        display: grid;
+        grid-gap: ~'calc(var(--gutter) * 2)';
+        grid-template-columns: repeat(3, 300px);
+    }
+}
