@@ -1,3 +1,3 @@
-Landing page for Ladies that UX Boston
+Landing page design & implementation for Ladies that UX Boston
 
-Build with Gatsby & hosted with Netlify
+Built with Gatsby & hosted with Netlify
