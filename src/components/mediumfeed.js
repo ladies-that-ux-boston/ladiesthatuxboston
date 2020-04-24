@@ -63,7 +63,7 @@ export default function MediumFeed({ data }) {
         rel="noopener noreferrer"
         className={styles.allPosts}
       >
-        Sell all
+        See all
       </a>
     </section>
   );
