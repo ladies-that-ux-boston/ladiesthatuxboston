@@ -8,6 +8,7 @@ module.exports = {
     twitterUsername: "@LadiesThatUXBOS",
     image: "./static/ltuxboston-share",
     url: "https://www.ladiesthatuxboston.com",
+    siteUrl: "https://www.ladiesthatuxboston.com",
   },
   plugins: [
     "gatsby-plugin-eslint",
