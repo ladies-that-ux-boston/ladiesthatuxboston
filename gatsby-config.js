@@ -1,10 +1,13 @@
 module.exports = {
   siteMetadata: {
     title: "Ladies that UX Boston",
+    titleTemplate: "A Boston meetup group",
     description:
       "Ladies that UX Boston (LTUX Boston) is a meetup group for people interested in user experience and other design topics in the Boston area",
     author: "@katielangerman",
-    siteUrl: "https://www.ladiesthatuxboston.com",
+    twitterUsername: "@LadiesThatUXBOS",
+    image: "./static/ltuxboston-share",
+    url: "https://www.ladiesthatuxboston.com",
   },
   plugins: [
     "gatsby-plugin-eslint",

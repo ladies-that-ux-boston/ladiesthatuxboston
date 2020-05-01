@@ -13,7 +13,7 @@ import MediumFeed from "../components/mediumfeed";
 
 const IndexPage = ({ data }) => (
   <Layout className={styles.homeWrap}>
-    <SEO title="Home" keywords={["ltux boston", "ladies that ux", "ux"]} />
+    <SEO title="Ladies that UX Boston" keywords={["ltux boston", "ladies that ux", "ux"]} />
 
     <section className={styles.heroWrap}>
       <div className={styles.headline}>
