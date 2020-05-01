@@ -6,7 +6,7 @@ module.exports = {
       "Ladies that UX Boston (LTUX Boston) is a meetup group for people interested in user experience and other design topics in the Boston area",
     author: "@katielangerman",
     twitterUsername: "@LadiesThatUXBOS",
-    image: "ltuxboston-share.jpg",
+    image: "/ltuxboston-share.jpg",
     url: "https://www.ladiesthatuxboston.com",
     siteUrl: "https://www.ladiesthatuxboston.com",
   },
