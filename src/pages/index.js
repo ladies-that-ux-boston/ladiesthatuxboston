@@ -10,10 +10,15 @@ import styles from "../styles/home.module.less";
 import buttonStyles from "../styles/button.module.less";
 import EmailSignup from "../components/emailsignup";
 import MediumFeed from "../components/mediumfeed";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faExternalLinkSquareAlt } from "@fortawesome/free-solid-svg-icons";
 
 const IndexPage = ({ data }) => (
   <Layout className={styles.homeWrap}>
-    <SEO title="Ladies that UX Boston" keywords={["ltux boston", "ladies that ux", "ux"]} />
+    <SEO
+      title="Ladies that UX Boston"
+      keywords={["ltux boston", "ladies that ux", "ux"]}
+    />
 
     <section className={styles.heroWrap}>
       <div className={styles.headline}>
@@ -45,6 +50,19 @@ const IndexPage = ({ data }) => (
           aria-hidden="true"
         />
       </div>
+    </section>
+    <section className={styles.nominate}>
+      <h3>
+        <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScx5mWwnqhqWYmLmndgUKzoXLHHqm9yR1RlfPt7zykMi8vnbA/viewform"
+          alt="Nominate our next feature"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Nominate our next #WCW feature{" "}
+          <FontAwesomeIcon icon={faExternalLinkSquareAlt} />
+        </a>
+      </h3>
     </section>
     <section className={styles.emailSignupWrap}>
       <h2 className="mg-btm-md">Join our monthly newsletter</h2>
