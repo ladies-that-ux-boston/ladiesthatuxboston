@@ -53,11 +53,11 @@ const AboutPage = () => (
         </span>
       </div>
       <div>
-        <img src={"/lara-cavezza.jpg"} alt="Lara Cavezza" />
-        <p>Lara Cavezza</p>
+        <img src={"/lara-cavezza.jpg"} alt="Lara Greenberg Cavezza" />
+        <p>Lara Greenberg Cavezza</p>
         <span className={styles.socialWrap}>
           <a
-            href="https://www.linkedin.com/in/lara-c-7b65ba91/"
+            href="https://www.linkedin.com/in/lara-g-7b65ba91/"
             target="_blank"
             rel="noopener norefferer"
           >
@@ -65,7 +65,7 @@ const AboutPage = () => (
             <span className="visually-hidden">LinkedIn</span>
           </a>
           <a
-            href="https://twitter.com/LarCavezz"
+            href="https://twitter.com/lar_greenberg"
             target="_blank"
             rel="noopener norefferer"
           >
