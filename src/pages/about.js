@@ -53,8 +53,8 @@ const AboutPage = () => (
         </span>
       </div>
       <div>
-        <img src={"/lara-cavezza.jpg"} alt="Lara Greenberg Cavezza" />
-        <p>Lara Greenberg Cavezza</p>
+        <img src={"/lara-cavezza.jpg"} alt="Lara Greenberg" />
+        <p>Lara Greenberg</p>
         <span className={styles.socialWrap}>
           <a
             href="https://www.linkedin.com/in/lara-g-7b65ba91/"
