@@ -53,7 +53,7 @@ const AboutPage = () => (
         </span>
       </div>
       <div>
-        <img src={"/lara-cavezza.jpg"} alt="Lara Greenberg" />
+        <img src={"/lara-greenberg.jpg"} alt="Lara Greenberg" />
         <p>Lara Greenberg</p>
         <span className={styles.socialWrap}>
           <a
