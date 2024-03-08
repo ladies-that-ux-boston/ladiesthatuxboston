@@ -29,7 +29,7 @@ const AboutPage = () => (
       </div>
     </section>
     <section className={styles.bioWrap}>
-      <h3>Boston Organizers</h3>
+      <h3>Previous Boston organizers</h3>
       <div>
         <img src={"/katie-langerman.jpg"} alt="Katie Langerman" />
         <p>Katie Langerman</p>
